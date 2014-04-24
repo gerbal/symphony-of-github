@@ -91,7 +91,7 @@
       {{/playbutton}}
 
       var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-37501388-1']);
+      _gaq.push(['_setAccount', 'UA-50350824-1']);
       _gaq.push(['_trackPageview']);
 
       (function() {
