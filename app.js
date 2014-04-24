@@ -3,7 +3,7 @@ var secret_token = "abda9f970ff3c57131886df93fde6386066c8a73";
 var GitHubApi = require("github"),
     Q = require('q'),
     express = require('express'),
-    https = require('https'),
+    https = require('https');
 
 var app = express();
 app.set('port', process.env.PORT || 4000);
