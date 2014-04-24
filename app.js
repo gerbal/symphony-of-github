@@ -4,7 +4,6 @@ var GitHubApi = require("github"),
     Q = require('q'),
     express = require('express'),
     https = require('https'),
-    http = require('http');
 
 var app = express();
 app.set('port', process.env.PORT || 4000);
