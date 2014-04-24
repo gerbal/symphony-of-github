@@ -18,7 +18,6 @@ var songOfGitHub = function(global, $, MIDI){
         d = new Date(calendarData[0][0]),
         dayOffset = d.getDay(),
         contrib, i, j, index;
-
     for(i = 0; i < calendarData.length; i++){
       // offset by day of week; dates sent over don't necessarily start at monday
       if(i == 0){
@@ -37,7 +36,6 @@ var songOfGitHub = function(global, $, MIDI){
         column = [];
       }
     }
-
     return weeks;
   }
 
@@ -63,7 +61,6 @@ var songOfGitHub = function(global, $, MIDI){
       for(m = 0; m < weeks[n].length; m++){
 
         contrib = weeks[n][m];
-
         if(contrib > 0){
           if(contrib < 5){
             contrib = 1;
@@ -171,6 +168,7 @@ var songOfGitHub = function(global, $, MIDI){
       var weeks, i;
       for (i = 0; i < names.length; i++) {
         weeks = organizeData(global.data[names[i]]);
+        // console.log(names[i]);
         loadVisualization(weeks, names[i]);
         allWeeks.push(weeks)
       }

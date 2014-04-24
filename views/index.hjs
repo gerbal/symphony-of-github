@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html xmlns = 'http://www.w3.org/1999/xhtml'>
   <head>
-    <title>Song of GitHub - Let me sing you the song of my contributions.</title>
+    <title>Symphony of GitHub - Let me sing you the song of our Repo.</title>
 
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
     <link href='/css/style.css' rel='stylesheet' type='text/css'>
@@ -10,15 +10,17 @@
   <body>
     <section id='main'>
       {{^embeddable}}
-        <h1>Song of GitHub</h1>
-        <h2>Let me sing you the song of my contributions.</h2>
+        <h1>Symphony of GitHub</h1>
+        <h2>Let me sing you the song of our Repo.</h2>
 
         <p>(Sound on, please.)</p>
 
         <form action='/' method='GET'>
-          <label for='username'>(comma-separated) GitHub username(s):</label>
-          <input name='username' value='{{namesString}}' size=50 />
-          <button type='submit'>Play that sassy jazz</button>
+          <label for='user'>GitHub username/Project Name:</label>
+          <input name='user' value='{{nameString}}' size=10 />
+          <label for='repo'>GitHub Repo Name:</label>
+          <input name='repo' value='{{repoString}}' size=10 />
+          <button type='submit'>Play it Maestro.</button>
         </form>
       {{/embeddable}}
 
@@ -36,17 +38,18 @@
             <tr id='day6'></tr>
           </table>
 
-          <p><a href='/?username={{key}}'>Share this (solo).</a></p>
+          <!-- <p><a href='/?username={{key}}'>Share this (solo).</a></p> -->
         </div>
       {{/calendarData}}
 
     {{^embeddable}}
       {{#anyValidNames}}
-        <p><h3><a href='/?username={{{namesString}}}'>Share this (all parts).</a></h3></p>
+        <p><h3><a href='/?user={{{nameString}}}&repo={{{repoString}}}'>Share this (all parts).</a></h3></p>
       {{/anyValidNames}}
 
       <footer>
-        <a href='https://github.com/ajacksified/song-of-github'>Get the code on GitHub.</a>
+        By <a href='https://github.com/gerbal/'>Gerbal</a>. A crude hack of
+        <a href='https://github.com/ajacksified/song-of-github'>Song of Github</a>
         By <a href='http://twitter.com/ajacksified'>@ajacksified</a> and <a href='https://github.com/ajacksified/song-of-github/contributors'>some amazing contributors</a>.
         Uses the super cool <a href='http://mudcu.be/midi-js/'>Midi.js</a>.
       </footer>
